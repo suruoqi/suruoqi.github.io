@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>献给苏蒻琦的浪漫网站</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to bottom right, #ff9a9e, #fad0c4);
+            font-family: 'Arial', sans-serif;
+            color: white;
+            text-align: center;
+        }
+        #message {
+            font-size: 2em;
+            opacity: 0;
+            transition: opacity 2s ease-in;
+        }
+        #photo {
+            display: none;
+            width: 50%;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #ff6b81;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #ff4757;
+        }
+    </style>
+</head>
+<body>
+    <div id="message">谨以此送给我的宝宝--苏蒻琦 愿她每天开心</div>
+    <img id="photo" src="example.jpg" alt="苏蒻琦的照片">
+    <button onclick="showPhoto()">展示照片</button>
+
+    <script>
+        window.onload = function() {
+            document.getElementById('message').style.opacity = 1;
+        };
+
+        function showPhoto() {
+            const photo = document.getElementById('photo');
+            photo.style.display = 'block';
+            photo.style.opacity = 0;
+            setTimeout(() => {
+                photo.style.transition = 'opacity 2s ease-in-out';
+                photo.style.opacity = 1;
+            }, 100);
+        }
+    </script>
+</body>
+</html>
