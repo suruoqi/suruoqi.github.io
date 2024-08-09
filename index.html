@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>苏蒻琦</title>
+    <title>情侣空间--苏蒻琦</title>
     <style>
         body {
             margin: 0;
@@ -84,6 +84,27 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-shadow: 0 0 10px rgba(255, 105, 180, 0.5), 0 0 20px rgba(255, 105, 180, 0.5);
+        }
+        #message2 {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2em;
+            color: #ff66b2;
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out 1s forwards;
+        }
+        #message2 a {
+            color: #ff66b2;
+            text-decoration: none;
+            position: relative;
+            display: inline-block;
+            animation: jump 1.5s infinite;
+        }
+        @keyframes jump {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
         }
         .effect {
             position: absolute;
@@ -182,7 +203,8 @@
     <div class="firefly"></div>
     <div class="firefly"></div>
     <div class="heart"></div>
-    <div id="message">谨以此送给我的宝宝--苏蒻琦 愿她每天开心</div>
+    <div id="message">我是苏蒻琦 A beautiful girl.</div>
+    <div id="message2">他是我的 <a href="https://wuwangze.github.io" target="_blank">宝宝</a></div>
     
     <script>
         document.body.addEventListener('touchstart', function(e) {
